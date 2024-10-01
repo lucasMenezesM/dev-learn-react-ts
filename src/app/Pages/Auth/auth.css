@@ -1,0 +1,24 @@
+#login__container h2, h5, #register__container h2, h5{
+    text-align: center;
+}
+
+.login__form-container, .register__form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__form, .register__form{
+    width: 400px;
+    border-radius: 5px;
+}
+
+.login__image-container, .register__image-container{
+    text-align: center;
+}
+
+.login__image, .register__image{
+    width: 400px;
+    border-radius: 15px;
+}
