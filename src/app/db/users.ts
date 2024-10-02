@@ -7,7 +7,7 @@ export interface UserI {
   enrolled_courses: ICourse[];
 }
 
-export const users: UserI[] = [
+export const dummyUsers: UserI[] = [
   {
     id: 1,
     name: "Alice Johnson",

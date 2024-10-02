@@ -1,5 +1,6 @@
 import { Router } from "./app/routes";
-import NavBar from "./app/shared/components/NavBar";
+
+import "./App.css"
 
 function App() {
   return (

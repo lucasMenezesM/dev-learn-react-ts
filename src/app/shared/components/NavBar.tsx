@@ -10,7 +10,7 @@ function TextLinkExample() {
     <Navbar className="bg-body-tertiary" id="navBar">
       <Container>
         <Navbar.Collapse>
-          <Navbar.Brand href="#home">DevLearn</Navbar.Brand>
+          <Navbar.Brand href="/">DevLearn</Navbar.Brand>
           <NavDropdown title="Categorias" id="basic-nav-dropdown" className="mx-3">
             <NavDropdown.Item href="/categories">Mostrar Categorias</NavDropdown.Item>
             <NavDropdown.Divider />
