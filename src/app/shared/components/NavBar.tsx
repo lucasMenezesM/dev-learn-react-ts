@@ -12,15 +12,15 @@ function TextLinkExample() {
         <Navbar.Collapse>
           <Navbar.Brand href="#home">DevLearn</Navbar.Brand>
           <NavDropdown title="Categorias" id="basic-nav-dropdown" className="mx-3">
-            <NavDropdown.Item href="#action/3.1">Mostrar Categorias</NavDropdown.Item>
+            <NavDropdown.Item href="/categories">Mostrar Categorias</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Criar Categoria</NavDropdown.Item>
+            <NavDropdown.Item href="">Criar Categoria</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown title="Cursos" id="basic-nav-dropdown" className="mx-3">
-            <NavDropdown.Item href="#action/3.1">Mostrar Cursos</NavDropdown.Item>
+            <NavDropdown.Item href="/courses">Mostrar Cursos</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Criar Curso</NavDropdown.Item>
+            <NavDropdown.Item href="">Criar Curso</NavDropdown.Item>
           </NavDropdown>
         </Navbar.Collapse>
 

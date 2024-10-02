@@ -9,6 +9,7 @@ import { ClassesList } from "../Pages/Class/pages/ClassesList";
 import { Login } from "../Pages/Auth/Pages/Login";
 import { Register } from "../Pages/Auth/Pages/Register";
 import NavBar from "../shared/components/NavBar";
+import Footer from "../shared/components/Footer";
 
 export const Router = () => {
   return (
@@ -29,6 +30,7 @@ export const Router = () => {
         <Route path="/classes" element={<ClassesList />} />
         <Route path="/classes/:id" element={<ClassDetail />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
