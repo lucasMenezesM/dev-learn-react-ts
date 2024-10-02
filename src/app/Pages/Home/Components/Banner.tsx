@@ -1,7 +1,7 @@
 import { MDBBtn } from "mdb-react-ui-kit"
+import { Link } from "react-router-dom"
 
 import "./Banner.css"
-import { Link } from "react-router-dom"
 
 export const Banner = () =>{
     return <section className="home__banner">
@@ -16,6 +16,5 @@ export const Banner = () =>{
                 <MDBBtn className="primary-banner">Fazer Login</MDBBtn>
             </Link>
         </div>
-
     </section>
 }

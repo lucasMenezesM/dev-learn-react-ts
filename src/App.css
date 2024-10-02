@@ -1,9 +1,19 @@
 .primary{
     background-color: #001F3F !important;
     
-    box-shadow: 1px 1px 1px #3A6D8C !important;
+    box-shadow: 1px 1px 5px #3A6D8C !important;
     &:hover{
         background-color: #3A6D8C !important;
-        box-shadow: 1px 1px 1px #001F3F !important;
+        box-shadow: 1px 1px 5px #001F3F !important;
+    }
+}
+
+.primary-inverted{
+    background-color: #3A6D8C !important;
+    box-shadow: 1px 1px 5px #001F3F !important;
+    
+    &:hover{
+        background-color: #001F3F !important;
+        box-shadow: 1px 1px 5px #3A6D8C !important;
     }
 }
