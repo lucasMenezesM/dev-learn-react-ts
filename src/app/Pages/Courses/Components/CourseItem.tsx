@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   MDBCard,
   MDBCardBody,
@@ -6,41 +6,39 @@ import {
   MDBCardText,
   MDBCardHeader,
   MDBCardFooter,
-  MDBBtn
-} from 'mdb-react-ui-kit';
+  MDBBtn,
+} from "mdb-react-ui-kit";
 
-import { ICourse } from '../../../db/courses';
-import { Link } from 'react-router-dom';
+import { ICourse } from "../../../db/courses";
+import { Link } from "react-router-dom";
 
 interface ICourseitem {
-    course: ICourse
+  course: ICourse;
 }
 
-export const CourseItem: React.FC<ICourseitem> = ({course}) => {
+export const CourseItem: React.FC<ICourseitem> = ({ course }) => {
   return (
-    <MDBCard alignment='center' className='courses__course-item'>
-      <MDBCardHeader >
-        Categoria: {" "}
-        {course.categories.map((category, index) =>{
-            return (
-                <Link className='courses__category-link' to={"/categories/"+category.id}>
-                    {index == course.categories.length - 1 ? category.name : category.name + ", "}
-                </Link>
-            )
+    <MDBCard alignment="center" className="courses__course-item">
+      <MDBCardHeader>
+        Categoria:{" "}
+        {course.categories.map((category, index) => {
+          return (
+            <Link className="courses__category-link" to={"/categories/" + category.id}>
+              {index === course.categories.length - 1 ? category.name : category.name + ", "}
+            </Link>
+          );
         })}
       </MDBCardHeader>
       <MDBCardBody>
-
         <MDBCardTitle>{course.name}</MDBCardTitle>
 
         <MDBCardText>{course.description}</MDBCardText>
 
-        <Link to={"/courses/"+course.id}>
-            <MDBBtn className='primary'>Visualizar</MDBBtn>
+        <Link to={"/courses/" + course.id}>
+          <MDBBtn className="primary">Visualizar</MDBBtn>
         </Link>
-        
       </MDBCardBody>
-      <MDBCardFooter className='text-muted'>Professor(a): {course.teacher}</MDBCardFooter>
+      <MDBCardFooter className="text-muted">Professor(a): {course.teacher}</MDBCardFooter>
     </MDBCard>
   );
-}
+};

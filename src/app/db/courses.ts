@@ -14,7 +14,8 @@ export const dummyCourses: ICourse[] = [
     name: "Introduction to React",
     classes: 12,
     teacher: "John Doe",
-    description: "Aprenda os fundamentos do React, a biblioteca JavaScript mais popular para a criação de interfaces de usuário modernas e interativas.",
+    description:
+      "Aprenda os fundamentos do React, a biblioteca JavaScript mais popular para a criação de interfaces de usuário modernas e interativas.",
     categories: [
       {
         id: 1,
@@ -29,7 +30,8 @@ export const dummyCourses: ICourse[] = [
     name: "Advanced TypeScript",
     classes: 10,
     teacher: "Jane Smith",
-    description: "Domine os conceitos avançados do TypeScript e melhore a qualidade e escalabilidade dos seus projetos JavaScript.",
+    description:
+      "Domine os conceitos avançados do TypeScript e melhore a qualidade e escalabilidade dos seus projetos JavaScript.",
     categories: [
       {
         id: 2,
@@ -44,7 +46,8 @@ export const dummyCourses: ICourse[] = [
     name: "Machine Learning Basics",
     classes: 15,
     teacher: "Dr. Emma White",
-    description: "Explore os conceitos fundamentais de Machine Learning, incluindo algoritmos supervisionados e não supervisionados.",
+    description:
+      "Explore os conceitos fundamentais de Machine Learning, incluindo algoritmos supervisionados e não supervisionados.",
     categories: [
       {
         id: 3,
@@ -52,10 +55,15 @@ export const dummyCourses: ICourse[] = [
         courses: [],
         teacher: "Dr. Emma White",
       },
+      {
+        id: 4,
+        name: "Python",
+        courses: [],
+        teacher: "Dr. Emma White",
+      },
     ],
   },
 ];
-
 
 // export const courses: ICourse[] = [
 //   {
