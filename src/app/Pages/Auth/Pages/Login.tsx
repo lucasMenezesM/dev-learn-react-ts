@@ -18,7 +18,9 @@ export function Login() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<string>("");
 
-  const handleLogin = (): void => {
+  const handleLogin = (e: React.FormEvent): void => {
+    e.preventDefault();
+
     console.log(`password: ${password}`);
     console.log(`email: ${email}`);
 
@@ -47,7 +49,7 @@ export function Login() {
           />
         </div>
 
-        <form className="login__form">
+        <form className="login__form" onSubmit={handleLogin}>
           {errors.length > 0 && (
             <MDBRow className="mt-4">
               <MDBCol>
@@ -72,7 +74,7 @@ export function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <MDBBtn onClick={handleLogin} className="" type="button" block>
+          <MDBBtn className="" type="submit" block>
             ENTRAR
           </MDBBtn>
 

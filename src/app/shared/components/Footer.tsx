@@ -43,7 +43,7 @@ export default function Footer() {
               </p>
               <p>
                 <Link className="text-reset" to={""}>
-                  BlueSkyes
+                  Threads
                 </Link>
               </p>
             </MDBCol>

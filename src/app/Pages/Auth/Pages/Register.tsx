@@ -14,7 +14,9 @@ export function Register() {
   const [passwordConfirmation, setPasswordConfirmation] = useState<string>("");
   const [error, setError] = useState<string>("");
 
-  const handleRegister = (): void => {
+  const handleRegister = (e: React.FormEvent): void => {
+    e.preventDefault();
+    
     console.log(email, name, password);
 
     if (!name || !password || !passwordConfirmation || !email)
@@ -43,7 +45,7 @@ export function Register() {
           />
         </div>
 
-        <form className="register__form">
+        <form className="register__form" onSubmit={handleRegister}>
           {error.length > 0 && (
             <MDBRow className="">
               <MDBCol>
@@ -93,7 +95,7 @@ export function Register() {
             onChange={(e) => setPasswordConfirmation(e.target.value)}
           />
 
-          <MDBBtn onClick={handleRegister} type="button" className="mb-4" block>
+          <MDBBtn onClick={handleRegister} type="submit" className="mb-4" block>
             CADASTRAR
           </MDBBtn>
 

@@ -34,9 +34,8 @@ export const Router = () => {
         <Route path="/classes/:id" element={<ClassDetail />} />
 
         <Route path="/categories" element={<Categories />}/>
-        <Route path="/category/new" element={<NewCategory />}/>
-        <Route path="/category/:id" element={<CategoryDetail />}/>
-
+        <Route path="/categories/new" element={<NewCategory />}/>
+        <Route path="/categories/:id" element={<CategoryDetail />}/>
       </Routes>
       <Footer />
     </BrowserRouter>
