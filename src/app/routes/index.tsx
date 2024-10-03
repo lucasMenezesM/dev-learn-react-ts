@@ -8,8 +8,11 @@ import { ClassDetail } from "../Pages/Class/pages/ClassDetail";
 import { ClassesList } from "../Pages/Class/pages/ClassesList";
 import { Login } from "../Pages/Auth/Pages/Login";
 import { Register } from "../Pages/Auth/Pages/Register";
+import { Categories } from "../Pages/Categories/Pages/Categories";
 import NavBar from "../shared/components/NavBar";
 import Footer from "../shared/components/Footer";
+import { CategoryDetail } from "../Pages/Categories/Pages/CategoryDetail";
+import { NewCategory } from "../Pages/Categories/Pages/NewCategory";
 
 export const Router = () => {
   return (
@@ -29,6 +32,11 @@ export const Router = () => {
 
         <Route path="/classes" element={<ClassesList />} />
         <Route path="/classes/:id" element={<ClassDetail />} />
+
+        <Route path="/categories" element={<Categories />}/>
+        <Route path="/category/new" element={<NewCategory />}/>
+        <Route path="/category/:id" element={<CategoryDetail />}/>
+
       </Routes>
       <Footer />
     </BrowserRouter>

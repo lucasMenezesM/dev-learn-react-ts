@@ -1,1 +1,3 @@
-export const NewContegory = () =>{}
+export const NewCategory = () =>{
+    return <></>
+}

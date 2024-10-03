@@ -1,23 +1,37 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from "react-bootstrap";
-import { ConfirmationModel } from "../../../shared/components/ConfirmationModel";
+import { ConfirmationModel } from "./ConfirmationModel";
 import { useNavigate } from "react-router-dom";
 
 interface ICourseModal {
+  title: string;
+  body: string;
   show: boolean;
+  confirmationTitle:string;
+  confirmationBody:string;
+  navegateLink: string;
   setShow: (value: boolean) => void;
-  onDestroyCourse: () => void;
+  onDelete: () => void;
 }
 
-export const DestroyCourseModal: React.FC<ICourseModal> = ({ show, setShow, onDestroyCourse }) => {
+export const DeleteModal: React.FC<ICourseModal> = ({ 
+  show, 
+  setShow, 
+  onDelete, 
+  title, 
+  body, 
+  confirmationBody, 
+  confirmationTitle,
+  navegateLink
+ }) => {
   const navigate = useNavigate();
   const handleClose = () => setShow(false);
   const [showDeleteConfimation, setShowDeleteConfirmation] = useState(false);
 
   const handleConfirm = (): void => {
     handleClose();
-    onDestroyCourse();
+    onDelete(); // METHOD PASSED THROUGH PARENT TO DELETE ITEM
     setShowDeleteConfirmation(true);
   };
 
@@ -26,16 +40,16 @@ export const DestroyCourseModal: React.FC<ICourseModal> = ({ show, setShow, onDe
       <ConfirmationModel
         show={showDeleteConfimation}
         setShow={setShowDeleteConfirmation}
-        title="Curso Apagado"
-        body="Esse Curso não se encontra mais na lista de cursos cadastrados no sistema"
-        navigateLink="/"
+        title={confirmationTitle}
+        body={confirmationBody}
+        navigateLink={navegateLink}
       />
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Tem certeza que deseja excluir esse curso?</Modal.Title>
+          <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Essa ação não pode ser desfeita após isso.</Modal.Body>
+        <Modal.Body>{body}</Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={handleConfirm}>
             Sim

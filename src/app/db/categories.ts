@@ -7,7 +7,7 @@ export interface ICategory {
   teacher: string;
 }
 
-export const categories: ICategory[] = [
+export const dummyCategories: ICategory[] = [
   {
     id: 1,
     name: "Frontend Development",

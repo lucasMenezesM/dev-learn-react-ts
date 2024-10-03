@@ -1,24 +1,18 @@
 import {
   MDBBtn,
   MDBBtnGroup,
-  MDBCard,
-  MDBCardBody,
-  MDBCardFooter,
-  MDBCardHeader,
-  MDBCardText,
-  MDBCardTitle,
   MDBCol,
   MDBContainer,
   MDBListGroup,
   MDBListGroupItem,
   MDBRow,
 } from "mdb-react-ui-kit";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { dummyCourses as courses } from "../../../db/courses";
 import { ICourse } from "../../../db/courses";
 import { Link } from "react-router-dom";
-import { DestroyCourseModal } from "../Components/DestroyCourseModal";
+import { DeleteModal } from "../../../shared/modals/DeleteModal";
 
 export const CourseDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -35,12 +29,21 @@ export const CourseDetail = () => {
   if (!course) return <h2>Não encontrado</h2>;
 
   const handleDestroyCourse = (): void => {
-    setShow(true);
+    // RUN LOGIC TO DESTROY COURSE
   };
 
   return (
     <section id="course-detail" className="">
-      <DestroyCourseModal setShow={setShow} show={show} onDestroyCourse={handleDestroyCourse} />
+      <DeleteModal 
+        title={`Tem certeza?`}
+        body={`Tem certeza que deseja apagar o curso ${course.name}? Essa ação não pode ser desfeita após isso.`}
+        confirmationTitle={`Curso Apagado!`}
+        confirmationBody={`O curso ${course.name} foi apagado com sucesso e não se encontra mais no sistema`}
+        setShow={setShow} 
+        show={show} 
+        onDelete={handleDestroyCourse}
+        navegateLink="/courses"
+      />
 
       <div className="course-detail__banner">
         <h2>{course.name}</h2>
@@ -55,7 +58,7 @@ export const CourseDetail = () => {
           <MDBBtnGroup className="d-flex flex-wrap">
             <MDBBtn className="primary">Acessar</MDBBtn>
             <MDBBtn className="btn-success">Editar</MDBBtn>
-            <MDBBtn onClick={handleDestroyCourse} className="btn-danger">
+            <MDBBtn onClick={() => setShow(true) } className="btn-danger">
               Excluir
             </MDBBtn>
             <MDBBtn className="transparent-inverted back-btn-container">
