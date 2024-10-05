@@ -16,7 +16,7 @@ export function Register() {
 
   const handleRegister = (e: React.FormEvent): void => {
     e.preventDefault();
-    
+
     console.log(email, name, password);
 
     if (!name || !password || !passwordConfirmation || !email)

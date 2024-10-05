@@ -1,0 +1,30 @@
+#not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found__image-container {
+  width: 450px;
+}
+
+#not-found img {
+  border-radius: 20px;
+}
+
+.not-found__text {
+  text-align: center;
+}
+
+.not-found__text h2 {
+  font-weight: 800;
+}
+
+.not-found__button {
+  display: flex;
+  /* justify-content: start; */
+}
+
+/* .not-found__button button {
+  width: 100%;
+} */

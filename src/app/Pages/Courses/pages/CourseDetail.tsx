@@ -13,6 +13,7 @@ import { dummyCourses as courses } from "../../../db/courses";
 import { ICourse } from "../../../db/courses";
 import { Link } from "react-router-dom";
 import { DeleteModal } from "../../../shared/modals/DeleteModal";
+import { NotFound } from "../../../shared/components/NotFound";
 
 export const CourseDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -26,7 +27,7 @@ export const CourseDetail = () => {
     setCourse(course);
   }, [id]);
 
-  if (!course) return <h2>Não encontrado</h2>;
+  if (!course) return <NotFound title="Erro 404" subTitle="O curso buscado não foi encontrado" />;
 
   const handleDestroyCourse = (): void => {
     // RUN LOGIC TO DESTROY COURSE
@@ -51,9 +52,6 @@ export const CourseDetail = () => {
       </div>
 
       <div className="course-detail__card-buttons">
-        {/* <MDBContainer className="d-flex justify-content-end">
-          <h5>CURSO DISPONÍVEL PARA MATRÍCULA</h5>
-        </MDBContainer> */}
         <MDBContainer className="d-flex justify-content-end">
           <MDBBtnGroup className="d-flex flex-wrap">
             <MDBBtn className="primary">Acessar</MDBBtn>

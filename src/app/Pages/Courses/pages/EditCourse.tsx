@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 import { dummyCategories } from "../../../db/categories";
 import { dummyCourses as courses } from "../../../db/courses";
 import { ICourse } from "../../../db/courses";
+import { NotFound } from "../../../shared/components/NotFound";
 
 export const EditCourse = () => {
   const { id } = useParams<{ id: string }>();
@@ -54,7 +55,7 @@ export const EditCourse = () => {
     setShowModal(true);
   };
 
-  if (!course) return <h1>Curso não encontrado</h1>;
+  if (!course) return <NotFound title="Erro 404" subTitle="O curso buscado não foi encontrado" />;
 
   return (
     <section id="new-course">
