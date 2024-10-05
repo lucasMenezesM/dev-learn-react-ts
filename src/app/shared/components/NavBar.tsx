@@ -20,7 +20,7 @@ function TextLinkExample() {
           <NavDropdown title="Cursos" id="basic-nav-dropdown" className="mx-3">
             <NavDropdown.Item href="/courses">Mostrar Cursos</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="">Criar Curso</NavDropdown.Item>
+            <NavDropdown.Item href="/courses/new">Criar Curso</NavDropdown.Item>
           </NavDropdown>
         </Navbar.Collapse>
 

@@ -13,6 +13,8 @@ import NavBar from "../shared/components/NavBar";
 import Footer from "../shared/components/Footer";
 import { CategoryDetail } from "../Pages/Categories/Pages/CategoryDetail";
 import { NewCategory } from "../Pages/Categories/Pages/NewCategory";
+import { NewCourse } from "../Pages/Courses/pages/NewCourse";
+import { EditCourse } from "../Pages/Courses/pages/EditCourse";
 
 export const Router = () => {
   return (
@@ -28,14 +30,16 @@ export const Router = () => {
         <Route path="/users/:id" element={<UserDetail />} />
 
         <Route path="/courses" element={<CoursesList />} />
+        <Route path="/courses/new" element={<NewCourse />} />
+        <Route path="/courses/edit/:id" element={<EditCourse />} />
         <Route path="/courses/:id" element={<CourseDetail />} />
 
         <Route path="/classes" element={<ClassesList />} />
         <Route path="/classes/:id" element={<ClassDetail />} />
 
-        <Route path="/categories" element={<Categories />}/>
-        <Route path="/categories/new" element={<NewCategory />}/>
-        <Route path="/categories/:id" element={<CategoryDetail />}/>
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/categories/new" element={<NewCategory />} />
+        <Route path="/categories/:id" element={<CategoryDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>

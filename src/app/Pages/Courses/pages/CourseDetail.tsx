@@ -34,13 +34,13 @@ export const CourseDetail = () => {
 
   return (
     <section id="course-detail" className="">
-      <DeleteModal 
+      <DeleteModal
         title={`Tem certeza?`}
         body={`Tem certeza que deseja apagar o curso ${course.name}? Essa ação não pode ser desfeita após isso.`}
         confirmationTitle={`Curso Apagado!`}
         confirmationBody={`O curso ${course.name} foi apagado com sucesso e não se encontra mais no sistema`}
-        setShow={setShow} 
-        show={show} 
+        setShow={setShow}
+        show={show}
         onDelete={handleDestroyCourse}
         navegateLink="/courses"
       />
@@ -57,8 +57,12 @@ export const CourseDetail = () => {
         <MDBContainer className="d-flex justify-content-end">
           <MDBBtnGroup className="d-flex flex-wrap">
             <MDBBtn className="primary">Acessar</MDBBtn>
-            <MDBBtn className="btn-success">Editar</MDBBtn>
-            <MDBBtn onClick={() => setShow(true) } className="btn-danger">
+            <MDBBtn className="btn-success">
+              <Link className="back-btn" to={"/courses/edit/" + course.id}>
+                Editar
+              </Link>
+            </MDBBtn>
+            <MDBBtn onClick={() => setShow(true)} className="btn-danger">
               Excluir
             </MDBBtn>
             <MDBBtn className="transparent-inverted back-btn-container">
