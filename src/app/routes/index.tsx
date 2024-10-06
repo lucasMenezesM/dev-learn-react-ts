@@ -16,6 +16,7 @@ import { NewCategory } from "../Pages/Categories/Pages/NewCategory";
 import { NewCourse } from "../Pages/Courses/pages/NewCourse";
 import { EditCourse } from "../Pages/Courses/pages/EditCourse";
 import { NotFound } from "../shared/components/NotFound";
+import { EditCategory } from "../Pages/Categories/Pages/EdiCategory";
 
 export const Router = () => {
   return (
@@ -40,6 +41,7 @@ export const Router = () => {
 
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/new" element={<NewCategory />} />
+        <Route path="/categories/edit/:id" element={<EditCategory />} />
         <Route path="/categories/:id" element={<CategoryDetail />} />
 
         <Route

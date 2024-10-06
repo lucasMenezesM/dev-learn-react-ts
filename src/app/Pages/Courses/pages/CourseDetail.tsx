@@ -14,6 +14,7 @@ import { ICourse } from "../../../db/courses";
 import { Link } from "react-router-dom";
 import { DeleteModal } from "../../../shared/modals/DeleteModal";
 import { NotFound } from "../../../shared/components/NotFound";
+import { Banner } from "../../../shared/components/Banner";
 
 export const CourseDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -46,10 +47,7 @@ export const CourseDetail = () => {
         navegateLink="/courses"
       />
 
-      <div className="course-detail__banner">
-        <h2>{course.name}</h2>
-        <h3>{course.description}</h3>
-      </div>
+      <Banner title={course.name} subTitle={course.description} image="course-detail-image.jpg" />
 
       <div className="course-detail__card-buttons">
         <MDBContainer className="d-flex justify-content-end">
@@ -94,7 +92,7 @@ export const CourseDetail = () => {
                 <MDBListGroupItem>Professor: {course.teacher}</MDBListGroupItem>
                 <MDBListGroupItem>Número de aulas: {course.classes}</MDBListGroupItem>
                 <MDBListGroupItem>
-                  {course.categories.length > 0
+                  {course.categories.length > 1
                     ? "Categorias relacionadas: "
                     : "Categoria relacionada: "}
                   {course.categories.map((category, index) => {

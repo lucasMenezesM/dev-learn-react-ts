@@ -1,0 +1,35 @@
+#banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#banner h2 {
+  font-size: 70px;
+  color: white;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+#banner h3 {
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  width: 80%;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 500px) {
+  #banner h2 {
+    font-size: 50px;
+  }
+
+  #banner h3 {
+    font-size: 20px;
+  }
+}

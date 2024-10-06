@@ -20,7 +20,7 @@ export const CourseItem: React.FC<ICourseitem> = ({ course }) => {
   return (
     <MDBCard alignment="center" className="courses__course-item">
       <MDBCardHeader>
-        Categoria:{" "}
+        {course.categories.length > 1 ? "Categorias: " : "Categoria: "}
         {course.categories.map((category, index) => {
           return (
             <Link className="courses__category-link" to={"/categories/" + category.id}>
