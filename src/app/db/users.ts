@@ -17,7 +17,7 @@ export const dummyUsers: IUser[] = [
       {
         id: 101,
         name: "Introduction to React",
-        classes: 12,
+        classesNumber: 12,
         teacher: "John Doe",
         description:
           "Aprenda os fundamentos do React, a biblioteca JavaScript mais popular para a criação de interfaces de usuário modernas e interativas.",
@@ -29,11 +29,12 @@ export const dummyUsers: IUser[] = [
             teacher: "John Doe",
           },
         ],
+        classes: []
       },
       {
         id: 102,
         name: "Advanced TypeScript",
-        classes: 10,
+        classesNumber: 10,
         teacher: "Jane Smith",
         description:
           "Domine os conceitos avançados do TypeScript e melhore a qualidade e escalabilidade dos seus projetos JavaScript.",
@@ -45,6 +46,7 @@ export const dummyUsers: IUser[] = [
             teacher: "Jane Smith",
           },
         ],
+        classes: []
       },
     ],
   },
@@ -57,7 +59,7 @@ export const dummyUsers: IUser[] = [
       {
         id: 103,
         name: "Machine Learning Basics",
-        classes: 15,
+        classesNumber: 15,
         teacher: "Dr. Emma White",
         description:
           "Explore os conceitos fundamentais de Machine Learning, incluindo algoritmos supervisionados e não supervisionados.",
@@ -69,6 +71,7 @@ export const dummyUsers: IUser[] = [
             teacher: "Dr. Emma White",
           },
         ],
+        classes: []
       },
     ],
   },

@@ -1,75 +1,125 @@
 import { ICategory } from "./categories";
+import { IClass } from "./classes";
 export interface ICourse {
   id: number;
   name: string;
-  classes: number;
+  classesNumber: number;
   teacher: string;
   description: string;
   categories: ICategory[];
+  classes: IClass[]
 }
 
 export const dummyCourses: ICourse[] = [
   {
-    id: 101,
-    name: "Introduction to React",
-    classes: 12,
-    teacher: "John Doe",
-    description:
-      "Aprenda os fundamentos do React, a biblioteca JavaScript mais popular para a criação de interfaces de usuário modernas e interativas.",
+    id: 1,
+    name: "Introdução à Programação",
+    classesNumber: 10,
+    teacher: "João Silva",
+    description: "Curso básico de programação, abordando lógica, algoritmos e linguagens de programação.",
     categories: [
-      {
-        id: 1,
-        name: "Frontend Development",
-        courses: [],
-        teacher: "John Doe",
-      },
+      { id: 1, name: "Programação", teacher: "", courses: [] },
+      { id: 2, name: "Iniciante", teacher: "", courses: [] }
     ],
+    classes: [
+      { id: 1, name: "Lógica de Programação", duration: 60, course_id: 1 },
+      { id: 2, name: "Introdução ao Python", duration: 90, course_id: 1 },
+    ]
   },
   {
-    id: 102,
-    name: "Advanced TypeScript",
-    classes: 10,
-    teacher: "Jane Smith",
-    description:
-      "Domine os conceitos avançados do TypeScript e melhore a qualidade e escalabilidade dos seus projetos JavaScript.",
+    id: 2,
+    name: "Desenvolvimento Web",
+    classesNumber: 12,
+    teacher: "Maria Oliveira",
+    description: "Curso focado em desenvolvimento de sites e aplicações web utilizando HTML, CSS e JavaScript.",
     categories: [
-      {
-        id: 2,
-        name: "Backend Development",
-        courses: [],
-        teacher: "Jane Smith",
-      },
+      { id: 3, name: "Web", teacher: "", courses: [] },
+      { id: 4, name: "Intermediário", teacher: "", courses: [] }
     ],
+    classes: [
+      { id: 3, name: "HTML e CSS", duration: 120, course_id: 2 },
+      { id: 4, name: "JavaScript Básico", duration: 90, course_id: 2 },
+    ]
   },
   {
-    id: 103,
-    name: "Machine Learning Basics",
-    classes: 15,
-    teacher: "Dr. Emma White",
-    description:
-      "Explore os conceitos fundamentais de Machine Learning, incluindo algoritmos supervisionados e não supervisionados.",
+    id: 3,
+    name: "Análise de Dados",
+    classesNumber: 8,
+    teacher: "Carlos Pereira",
+    description: "Aprenda a coletar, processar e analisar dados usando ferramentas como Python e Excel.",
     categories: [
-      {
-        id: 3,
-        name: "Artificial Intelligence",
-        courses: [],
-        teacher: "Dr. Emma White",
-      },
-      {
-        id: 4,
-        name: "Python",
-        courses: [],
-        teacher: "Dr. Emma White",
-      },
+      { id: 5, name: "Dados", teacher: "", courses: [] },
+      { id: 6, name: "Análise", teacher: "", courses: [] }
     ],
-  },
+    classes: [
+      { id: 5, name: "Introdução à Análise de Dados", duration: 75, course_id: 3 },
+      { id: 6, name: "Visualização de Dados com Python", duration: 90, course_id: 3 },
+    ]
+  }
 ];
+
+// export const dummyCourses: ICourse[] = [
+//   {
+//     id: 101,
+//     name: "Introduction to React",
+//     classesNumber: 12,
+//     teacher: "John Doe",
+//     description:
+//       "Aprenda os fundamentos do React, a biblioteca JavaScript mais popular para a criação de interfaces de usuário modernas e interativas.",
+//     categories: [
+//       {
+//         id: 1,
+//         name: "Frontend Development",
+//         courses: [],
+//         teacher: "John Doe",
+//       },
+//     ],
+//   },
+//   {
+//     id: 102,
+//     name: "Advanced TypeScript",
+//     classesNumber: 10,
+//     teacher: "Jane Smith",
+//     description:
+//       "Domine os conceitos avançados do TypeScript e melhore a qualidade e escalabilidade dos seus projetos JavaScript.",
+//     categories: [
+//       {
+//         id: 2,
+//         name: "Backend Development",
+//         courses: [],
+//         teacher: "Jane Smith",
+//       },
+//     ],
+//   },
+//   {
+//     id: 103,
+//     name: "Machine Learning Basics",
+//     classesNumber: 15,
+//     teacher: "Dr. Emma White",
+//     description:
+//       "Explore os conceitos fundamentais de Machine Learning, incluindo algoritmos supervisionados e não supervisionados.",
+//     categories: [
+//       {
+//         id: 3,
+//         name: "Artificial Intelligence",
+//         courses: [],
+//         teacher: "Dr. Emma White",
+//       },
+//       {
+//         id: 4,
+//         name: "Python",
+//         courses: [],
+//         teacher: "Dr. Emma White",
+//       },
+//     ],
+//   },
+// ];
 
 // export const courses: ICourse[] = [
 //   {
 //     name: "Introduction to React",
 //     category: "Web Development",
-//     classes: 12,
+//     classesNumber: 12,
 //     teacher: "John Doe",
 //   },
 //   {

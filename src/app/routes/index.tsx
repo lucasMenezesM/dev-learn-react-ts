@@ -1,3 +1,5 @@
+import NavBar from "../shared/components/NavBar";
+import Footer from "../shared/components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "../Pages/Home";
 import { UsersList } from "../Pages/Users/pages/UsersList";
@@ -9,14 +11,14 @@ import { ClassesList } from "../Pages/Class/pages/ClassesList";
 import { Login } from "../Pages/Auth/Pages/Login";
 import { Register } from "../Pages/Auth/Pages/Register";
 import { Categories } from "../Pages/Categories/Pages/Categories";
-import NavBar from "../shared/components/NavBar";
-import Footer from "../shared/components/Footer";
 import { CategoryDetail } from "../Pages/Categories/Pages/CategoryDetail";
 import { NewCategory } from "../Pages/Categories/Pages/NewCategory";
 import { NewCourse } from "../Pages/Courses/pages/NewCourse";
 import { EditCourse } from "../Pages/Courses/pages/EditCourse";
 import { NotFound } from "../shared/components/NotFound";
 import { EditCategory } from "../Pages/Categories/Pages/EdiCategory";
+import { NewClass } from "../Pages/Class/pages/NewClass";
+import { EditClass } from "../Pages/Class/pages/EditClass";
 
 export const Router = () => {
   return (
@@ -36,8 +38,10 @@ export const Router = () => {
         <Route path="/courses/edit/:id" element={<EditCourse />} />
         <Route path="/courses/:id" element={<CourseDetail />} />
 
-        <Route path="/classes" element={<ClassesList />} />
-        <Route path="/classes/:id" element={<ClassDetail />} />
+        <Route path="/classes/new" element={<NewClass />} />
+        <Route path="/classes/details/:id" element={<ClassDetail />} />
+        <Route path="/classes/all/:courseId" element={<ClassesList />} />
+        <Route path="/classes/edit/:id" element={<EditClass />} />
 
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/new" element={<NewCategory />} />

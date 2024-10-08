@@ -7,7 +7,7 @@ import {
   MDBListGroupItem,
   MDBRow,
 } from "mdb-react-ui-kit";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { dummyCourses as courses } from "../../../db/courses";
 import { ICourse } from "../../../db/courses";
@@ -17,6 +17,8 @@ import { NotFound } from "../../../shared/components/NotFound";
 import { Banner } from "../../../shared/components/Banner";
 
 export const CourseDetail = () => {
+  const navigate = useNavigate();
+
   const { id } = useParams<{ id: string }>();
 
   const [course, setCourse] = useState<ICourse | undefined>(undefined);
@@ -52,7 +54,7 @@ export const CourseDetail = () => {
       <div className="course-detail__card-buttons">
         <MDBContainer className="d-flex justify-content-end">
           <MDBBtnGroup className="d-flex flex-wrap">
-            <MDBBtn className="primary">Acessar</MDBBtn>
+            <MDBBtn onClick={()=> navigate("/classes/all/" + course.id)} className="primary">Acessar</MDBBtn>
             <MDBBtn className="btn-success">
               <Link className="back-btn" to={"/courses/edit/" + course.id}>
                 Editar
@@ -90,7 +92,7 @@ export const CourseDetail = () => {
             <MDBRow>
               <MDBListGroup>
                 <MDBListGroupItem>Professor: {course.teacher}</MDBListGroupItem>
-                <MDBListGroupItem>Número de aulas: {course.classes}</MDBListGroupItem>
+                <MDBListGroupItem>Número de aulas: {course.classesNumber}</MDBListGroupItem>
                 <MDBListGroupItem>
                   {course.categories.length > 1
                     ? "Categorias relacionadas: "

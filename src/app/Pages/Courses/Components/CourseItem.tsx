@@ -37,6 +37,7 @@ export const CourseItem: React.FC<ICourseitem> = ({ course }) => {
         <Link to={"/courses/" + course.id}>
           <MDBBtn className="primary">Visualizar</MDBBtn>
         </Link>
+        
       </MDBCardBody>
       <MDBCardFooter className="text-muted">Professor(a): {course.teacher}</MDBCardFooter>
     </MDBCard>
