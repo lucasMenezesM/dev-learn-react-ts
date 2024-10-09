@@ -39,7 +39,7 @@ export const ClassItem:React.FC<ClassItem> = ({classItem}) =>{
                 <MDBCardText>
                     Professor(a): exemplo
                 </MDBCardText>
-                <Link to={"classes/"}>
+                <Link to={`/classes/${classItem.course_id}/watch/${classItem.id}`}>
                     <MDBBtn className="primary">Ir para Aula</MDBBtn>
                 </Link>
                 <Link to={"/classes/edit/"+classItem.id}>

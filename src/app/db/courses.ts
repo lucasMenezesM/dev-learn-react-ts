@@ -22,8 +22,8 @@ export const dummyCourses: ICourse[] = [
       { id: 2, name: "Iniciante", teacher: "", courses: [] }
     ],
     classes: [
-      { id: 1, name: "Lógica de Programação", duration: 60, course_id: 1 },
-      { id: 2, name: "Introdução ao Python", duration: 90, course_id: 1 },
+      { id: 1, name: "Lógica de Programação", duration: 60, course_id: 1, url: "" },
+      { id: 2, name: "Introdução ao Python", duration: 90, course_id: 1, url: "" },
     ]
   },
   {
@@ -37,8 +37,8 @@ export const dummyCourses: ICourse[] = [
       { id: 4, name: "Intermediário", teacher: "", courses: [] }
     ],
     classes: [
-      { id: 3, name: "HTML e CSS", duration: 120, course_id: 2 },
-      { id: 4, name: "JavaScript Básico", duration: 90, course_id: 2 },
+      { id: 3, name: "HTML e CSS", duration: 120, course_id: 2, url: "" },
+      { id: 4, name: "JavaScript Básico", duration: 90, course_id: 2, url: "" },
     ]
   },
   {
@@ -52,8 +52,8 @@ export const dummyCourses: ICourse[] = [
       { id: 6, name: "Análise", teacher: "", courses: [] }
     ],
     classes: [
-      { id: 5, name: "Introdução à Análise de Dados", duration: 75, course_id: 3 },
-      { id: 6, name: "Visualização de Dados com Python", duration: 90, course_id: 3 },
+      { id: 5, name: "Introdução à Análise de Dados", duration: 75, course_id: 3, url: "" },
+      { id: 6, name: "Visualização de Dados com Python", duration: 90, course_id: 3 , url: ""},
     ]
   }
 ];

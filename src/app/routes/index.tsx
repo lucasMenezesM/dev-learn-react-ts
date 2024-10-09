@@ -39,9 +39,9 @@ export const Router = () => {
         <Route path="/courses/:id" element={<CourseDetail />} />
 
         <Route path="/classes/new" element={<NewClass />} />
-        <Route path="/classes/details/:id" element={<ClassDetail />} />
         <Route path="/classes/all/:courseId" element={<ClassesList />} />
         <Route path="/classes/edit/:id" element={<EditClass />} />
+        <Route path="/classes/:courseId/watch/:classId" element={<ClassDetail />} />
 
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/new" element={<NewCategory />} />

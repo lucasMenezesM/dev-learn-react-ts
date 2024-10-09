@@ -39,7 +39,7 @@ export const ClassesList:React.FC = () => {
         </div>
 
         <div className="classes__classes-list">
-          <h3>Aulas disponíveis: </h3>
+          <h3>Aulas disponíveis:</h3>
           {classes?.map((classItem) =>{
             return <ClassItem classItem={classItem}/>
           })}
